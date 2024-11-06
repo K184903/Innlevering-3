@@ -31,7 +31,6 @@ public abstract class Innlegg {
 	
 	public String getBruker() {
 		return bruker;
-		
 
 	}
 
@@ -68,7 +67,6 @@ public abstract class Innlegg {
 	
 	public boolean erLik(Innlegg innlegg) {
 		return this.id == innlegg.getId();
-		
 
 	}
 	
@@ -77,7 +75,7 @@ public abstract class Innlegg {
 		
 		String innlegg;
 		
-		innlegg = "" + id + "\n" + bruker + "\n" + dato  + "\n" + likes + "\n";
+		innlegg = id + "\n" + bruker + "\n" + dato  + "\n" + likes + "\n";
 		return innlegg;
 		
 	}

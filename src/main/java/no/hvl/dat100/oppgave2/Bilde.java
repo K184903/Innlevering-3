@@ -4,7 +4,7 @@ import no.hvl.dat100.common.TODO;
 
 public class Bilde extends Tekst {
 
-	private String url; //skal de være url her?? 
+	private String url;
 	
 	public Bilde(int id, String bruker, String dato, String tekst, String url) {
 		super(id,bruker,dato,tekst);
@@ -19,7 +19,6 @@ public class Bilde extends Tekst {
 	public String getUrl() {
 		return url;
 				
-
 	}
 
 	public void setUrl(String url) {
@@ -28,8 +27,9 @@ public class Bilde extends Tekst {
 
 	@Override
 	public String toString() {
-		return "BILDE\n" + getId() + "\n" + getBruker() + "\n" + getDato() + "\n" + getLikes() + "\n" + url+ "\n" + "http://www.picture.com/oo.jpg" + "\n";
-
+		
+		return "BILDE\n" + getId() + "\n" + getBruker() + "\n" + getDato() + "\n" + getLikes() + "\n" + url + "\n";
+// usikker på denne toStringen
 	}
 
 	// Metoden nedenfor er kun for valgfri oppgave 6

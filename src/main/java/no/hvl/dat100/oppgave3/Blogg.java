@@ -13,7 +13,8 @@ public class Blogg {
 
 	}
 
-	public Blogg(int lengde) {
+	public Blogg(int lengde ) {
+	
 		innleggtabell = new Innlegg[lengde]; // kapasitet
 		nesteLedig = 0;
 	}
@@ -64,12 +65,16 @@ public class Blogg {
 	    return true;
 
 	}
-
-	//public String toString() {
-		//return getId() + "\n" + "TEKST" +"\n 1" + bruker + "\n" + dato + "\n0" + "en tekst" + "\n" + bilde "\n"+ bruker + "\n" + "et bilde"+ "\n"+ url"\n";
+    @Override 
+    
+	public String toString() {
+    	for (int i=0; i<nesteLedig; i++) {
+    		return "TEKST\n" + innleggtabell[i].getId() + "\n" + innleggtabell[i].getBruker() + "\n" + innleggtabell[i].getDato() + "\n" + "\n" + innleggtabell[i].getTekst() + "\n";
+//    	return getId() + "\n" + "TEKST" +"\n 1" + getBruker() + "\n" + getDato() + "\n0" + "en tekst" + "\n" + getBilde() "\n"+ getBruker() + "\n" + "et bilde"+ "\n"+ url"\n";
+    }
+    	}
 		
 	
-
 	// valgfrie oppgaver nedenfor
 
 	public void utvid() {
