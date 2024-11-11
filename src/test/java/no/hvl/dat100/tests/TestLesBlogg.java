@@ -20,7 +20,7 @@ public class TestLesBlogg {
 		Blogg samling = LesBlogg.les(MAPPE,FILNAVN);
 
 		Tekst innlegg1 = new Tekst(1,"Ole Olsen","23-10","en tekst");
-		Bilde innlegg2 = new Bilde(2,"Oline Olsen","24-10","et bilde","http://www.picture.com/oo.jpg");
+		Bilde innlegg2 = new Bilde(2,"Oline Olsen","24-10",0, "et bilde","http://www.picture.com/oo.jpg");
 		
 		assertEquals(samling.getAntall(),2);
 		assertTrue(samling.finnes(innlegg1));

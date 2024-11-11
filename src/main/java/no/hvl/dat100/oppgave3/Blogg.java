@@ -15,8 +15,8 @@ public class Blogg {
 
 	}
 
-	public Blogg(int lengde ) {
-	
+	public Blogg(int lengde) {
+
 		innleggtabell = new Innlegg[lengde]; // kapasitet
 		nesteLedig = 0;
 	}
@@ -51,72 +51,34 @@ public class Blogg {
 
 	public boolean ledigPlass() {
 		return nesteLedig < innleggtabell.length;
-		
+
 	}
 
 	public boolean leggTil(Innlegg innlegg) {
 		if (nesteLedig == innleggtabell.length) {
-	        return false; // Returnerer false hvis ingen ledig plass
-	    }
-	    if (finnes(innlegg)) {    // Sjekker om innlegget allerede finnes
-	        return false; // Returnerer false hvis innlegget finnes fra før
-	    }
-	    // Legger til innlegget på neste ledige posisjon
-	    innleggtabell[nesteLedig] = innlegg;
-	    nesteLedig++;
-	    return true;
+			return false; // Returnerer false hvis ingen ledig plass
+		}
+		if (finnes(innlegg)) { // Sjekker om innlegget allerede finnes
+			return false; // Returnerer false hvis innlegget finnes fra før
+		}
+		// Legger til innlegget på neste ledige posisjon
+		innleggtabell[nesteLedig] = innlegg;
+		nesteLedig++;
+		return true;
 
 	}
-    @Override 
-    
+
+	@Override
+
 	public String toString() {
-    	String str = "" ;
-    	for (int i=0; i<nesteLedig; i++) {
-    		Innlegg x = innleggtabell[i];
-    		
-    		if (x instanceof Tekst) {
-    			Tekst t = (Tekst) x;
-    			String tekst = t.getTekst();
-    			str +=  "TEKST\n" + x.getId() + "\n" + innleggtabell[i].getBruker() + "\n" + innleggtabell[i].getDato() + "\n" + "\n" + tekst + "\n";
-    		}
-    		
-    		if (x instanceof Bilde) {
-    			Bilde b = (Bilde)x;
-    			String tekst = b.getTekst();
-    			String url = b.getUrl();
-    			str +=  "TEKST\n" + x.getId() + "\n" + innleggtabell[i].getBruker() + "\n" + innleggtabell[i].getDato() + "\n" + "\n" + tekst + "\n" + url + "\n";
-    		}
-    		
-    		
-    }
-    	return str;
-    	}
+		String str = nesteLedig+ "\n";
+		for (int i = 0; i < nesteLedig; i++) {
+			Innlegg x = innleggtabell[i];
+			str+= x.toString();
+
+			}
+		return str;
 		
-	
-	// valgfrie oppgaver nedenfor
-
-	public void utvid() {
-		throw new UnsupportedOperationException(TODO.method());
 	}
 
-	public boolean leggTilUtvid(Innlegg innlegg) {
-
-		throw new UnsupportedOperationException(TODO.method());
-
-	}
-
-	public boolean slett(Innlegg innlegg) {
-
-		throw new UnsupportedOperationException(TODO.method());
-	}
-
-	public int[] search(String keyword) {
-
-		throw new UnsupportedOperationException(TODO.method());
-
-	}
-	
-	public static void main(String[] args) {
-		Bilde y = Bilde(2, "Idunn", "06/11/24");
-	}
 }

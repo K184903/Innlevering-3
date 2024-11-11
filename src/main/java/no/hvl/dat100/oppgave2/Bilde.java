@@ -28,8 +28,8 @@ public class Bilde extends Tekst {
 	@Override
 	public String toString() {
 		
-		return "BILDE\n" + getId() + "\n" + getBruker() + "\n" + getDato() + "\n" + getLikes() + "\n" + url + "\n";
-// usikker på denne toStringen
+		return "BILDE\n" + getId() + "\n" + getBruker() + "\n" + getDato() + "\n" + getLikes() + "\n" + "et bilde" + "\n" +  url + "\n";
+
 	}
 
 	// Metoden nedenfor er kun for valgfri oppgave 6

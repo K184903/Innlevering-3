@@ -21,7 +21,7 @@ public class SkrivBlogg {
 		
 		try {
 			
-			File fil = new File(mappe + filnavn + samling);
+			File fil = new File(mappe + filnavn);
 		
 			Scanner leser = new Scanner(fil);
 			String linje; 
@@ -39,6 +39,7 @@ public class SkrivBlogg {
 		}catch (FileNotFoundException e){
 			funket = false;
 		}
+		
 		return funket;
 
 		
